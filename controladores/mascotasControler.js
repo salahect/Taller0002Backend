@@ -9,9 +9,14 @@ const crear = (req,res)=>{
         }) ;
         return;
     }
+
     const dataset={
         nombre: req.body.nombre,
-        edad: req.body.edad
+        edad: req.body.edad,
+        raza: req.body.raza,
+        color: req.body.color,
+        sexo: req.body.sexo
+        
     };
 
     //Usar Sequelize para crear el recurso
@@ -114,5 +119,6 @@ const eliminar=(req,res)=>{
     
 
 };
+
 
 export {crear,buscarId,buscar,actualizar,eliminar}

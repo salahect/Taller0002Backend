@@ -1,5 +1,7 @@
 import express from "express";
 import { routerMascotas } from "../rutas/mascotasRouter.js";
+import { routerMascotas1 } from "../rutas/mascotasRouter.js";
+import { routerMascotas2 } from "../rutas/mascotasRouter.js";
 import {db} from "../database/conexion.js";
 
 //Crear Instancia de Express
@@ -21,6 +23,8 @@ app.get("/",(req,res)=>{
 
 //Rutas
 app.use("/mascotas",routerMascotas);
+app.use("/padres",routerMascotas1);
+app.use("/adopcion",routerMascotas2);
 //Puerto de Servidor 
 const PORT=8000;
 

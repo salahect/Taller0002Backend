@@ -6,14 +6,18 @@ Content-Type: application/json
 
 {
     "nombre": "broly",
-    "edad": 5
+    "edad": 4,
+    "raza": "labrador",
+    "color": "cafe",
+    "sexo": "macho"
+
 }
 
 ###
-GET http://localhost:8000/mascotas/buscarId/6 HTTP/1.1
+GET http://localhost:8000/mascotas/buscar/5 HTTP/1.1
 
 ###
-PUT http://localhost:8000/mascotas/actualizar/6 HTTP/1.1
+PUT http://localhost:8000/mascotas/actualizar/5 HTTP/1.1
 Content-Type: application/json
 
 {
@@ -22,7 +26,26 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:8000/mascotas/eliminar/3 HTTP/1.1
+DELETE http://localhost:8000/mascotas/eliminar/7 HTTP/1.1
 
 ###
 DELETE http://localhost:8000/mascotas/eliminarTodo HTTP/1.1
+
+###
+POST  http://localhost:8000/padres/crearP HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre":"jorge mario ramirez",
+    "cedula":"1087188475",
+    "direcion":"nueva creacion",
+    "telefono":"31629026454"
+}
+###
+
+GET http://localhost:8000/padres/buscarP HTTP/1.1
+
+###
+
+GET http://localhost:8000/adopcion/buscarA HTTP/1.1
+
